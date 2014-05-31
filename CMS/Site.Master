@@ -1,90 +1,101 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CMS.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CMS.Site" %>
 
 <!DOCTYPE html>
-<html lang="ru">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <title><%: Page.Title %> — мое приложение ASP.NET</title>
-    <asp:PlaceHolder runat="server">     
-          <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>  
-    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width" />
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+    <script src="js/jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="js/js-fnc.js" type="text/javascript"></script>
+    <!--[if IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form runat="server">
-    <asp:ScriptManager runat="server">
-        <Scripts>
-            <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-            <%--Framework Scripts--%>
-            
-            <asp:ScriptReference Name="MsAjaxBundle" />
-            <asp:ScriptReference Name="jquery" />
-            <asp:ScriptReference Name="jquery.ui.combined" />
-            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-            <asp:ScriptReference Name="WebFormsBundle" />
-            <%--Site Scripts--%>
-
-        </Scripts>
-    </asp:ScriptManager>
-    <header>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p class="site-title">
-                    <a runat="server" href="~/">ваша эмблема здесь</a>
-                </p>
-            </div>
-            <div class="float-right">
-                <section id="login">
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul>
-                                <li><a id="registerLink" runat="server" href="~/Account/Register">Зарегистрироваться</a></li>
-                                <li><a id="loginLink" runat="server" href="~/Account/Login">Вход</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <p>
-                                Hello, <a runat="server" class="username" href="~/Account/Manage" title="Manage your account">
-                                    <asp:LoginName runat="server" CssClass="username" /></a>!
-                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Выход" LogoutPageUrl="~/" />
-                            </p>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </section>
-                <nav>
-                    <ul id="menu">
-                        <li><a runat="server" href="~/">Домашняя</a></li>
-                        <li><a runat="server" href="~/About">Информация</a></li>
-                        <li><a runat="server" href="~/Contact">Связаться</a></li>
+    <form id="form1" runat="server">
+        <div id="header">
+            <div class="shell">
+                <div id="logo-holder">
+                    <h1 id="logo"><a href="#">WCSST 9</a></h1>
+                    <p id="quote">Free CSS Website Template</p>
+                </div>
+                <div id="navigation">
+                    <ul>
+                        <li><a href="#" class="active"><span>Home</span></a></li>
+                        <li><a href="#"><span>About Us</span></a></li>
+                        <li><a href="#"><span>Services</span></a></li>
+                        <li><a href="#"><span>Solutions</span></a></li>
+                        <li><a href="#"><span>Support</span></a></li>
+                        <li><a href="#"><span>Partners</span></a></li>
+                        <li><a href="#"><span>Contact</span></a></li>
                     </ul>
-                </nav>
+                </div>
+                <div class="cl">&nbsp;</div>
             </div>
         </div>
-    </header>
-    <div id="body">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-    </div>
-    <footer>
-        <div class="content-wrapper">
-            <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - мое приложение ASP.NET</p>
+
+
+        <div id="featured-content">
+            <div class="shell">
+                <asp:ContentPlaceHolder ID="FeaturedContent" runat="server">
+                    <b>тест</b>
+                </asp:ContentPlaceHolder>
             </div>
         </div>
-    </footer>
+
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <div id="main">
+                <div class="shell">
+                    <div class="col">
+                        <div class="post">
+                            <h3>Who Are We?</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <a href="#">Website CSS Templates</a> unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="post">
+                            <h3>What We Do ?</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing</p>
+                        </div>
+                    </div>
+                    <div class="col col-last">
+                        <div class="post">
+                            <h3>Latest Project</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, <a href="#">Website CSS Templates</a> unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="cl">&nbsp;</div>
+                    <div id="main-content">
+                        <div class="post">
+                            <h3>Some Title</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<a href="#">Website CSS Templates</a> in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <div id="sidebar">
+                        <div class="post">
+                            <h3>Some Title</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown <a href="#">Website CSS Templates</a> and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typeset</p>
+                        </div>
+                    </div>
+                    <div class="cl">&nbsp;</div>
+                </div>
+            </div>
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="FooterContent" runat="server">
+            <div class="footer">
+                <div class="shell">
+                    <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+                    <p class="rf"><a href="http://www.free-css.com/" target="_blank">Free CSS Templates</a> by <a href="http://www.websitecsstemplates.com/" target="_blank">WebsiteCSSTemplates</a></p>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </asp:ContentPlaceHolder>
+
     </form>
 </body>
 </html>
