@@ -49,6 +49,15 @@ namespace CMS {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
         
         /// <summary>
+        /// SideBar элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder SideBar;
+        
+        /// <summary>
         /// FooterContent элемент управления.
         /// </summary>
         /// <remarks>

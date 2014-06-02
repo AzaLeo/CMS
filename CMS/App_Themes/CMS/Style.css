@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 16px;
     font-family: Georgia, serif;
     color: #4c4c4c;
@@ -142,9 +142,9 @@ textarea {
 }
 
     #featured-content h2 {
-        font-size: 40px;
+        font-size: 30px;
         font-style: italic;
-        line-height: 40px;
+        line-height: 30px;
         color: #fff;
         padding-bottom: 9px;
     }
@@ -239,3 +239,10 @@ textarea {
         .footer .rf {
             float: right;
         }
+
+table.content td, table.content th {
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border: solid 1px #efefef;
+}
