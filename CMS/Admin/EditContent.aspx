@@ -3,9 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+    Редактирование контента
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <table class="content">
+    <table class="editcontent">    
         <tr>
             <td>
                 <asp:Label ID="LabelId" runat="server" Text="ID" />
@@ -14,12 +15,12 @@
                 <asp:Label runat="server" ID="LabelIdResult" />
             </td>
         </tr>
-                <tr>
+        <tr>
             <td>
                 <asp:Label ID="LabelTitle" runat="server" Text="Заголовок" />
             </td>
             <td>
-                <asp:TextBox ID="TextBoxTitle" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBoxTitle" runat="server" />
             </td>
         </tr>
         <tr>
@@ -51,7 +52,7 @@
             </td>
         </tr>
         <tr>
-                        <td>
+            <td>
                 <asp:Label ID="LabelPosition" runat="server" Text="Позиция" />
             </td>
             <td>
@@ -59,6 +60,19 @@
                     <asp:ListItem>MainContent</asp:ListItem>
                     <asp:ListItem>SideBar</asp:ListItem>
                 </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="LabelText" runat="server" Text="Текст" />
+            </td>
+            <td>
+                <asp:TextBox ID="TextBoxText" runat="server" TextMode="MultiLine"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <asp:Button ID="ButtonSaveContent" runat="server" Text="Сохранить" OnClick="ButtonSaveContent_Click" />
             </td>
         </tr>
     </table>

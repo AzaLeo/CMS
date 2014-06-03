@@ -39,8 +39,10 @@
 
         <div id="featured-content">
             <div class="shell">
-                <asp:ContentPlaceHolder ID="FeaturedContent" runat="server">
-                </asp:ContentPlaceHolder>
+                <h2>
+                    <asp:ContentPlaceHolder ID="FeaturedContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </h2>
             </div>
         </div>
 

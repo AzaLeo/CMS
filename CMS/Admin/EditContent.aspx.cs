@@ -17,21 +17,42 @@ namespace CMS.Admin
             _cmsEntity = new CMSEntities();
             _currentContentId = Convert.ToInt32(Request.QueryString["id"]);
 
-            var query = from content in _cmsEntity.Contents
-                        where content.ContentId == _currentContentId
-                        select content;
-
-            foreach (var r in query)
+            if (!IsPostBack)
             {
-                LabelIdResult.Text = r.ContentId.ToString();
-                TextBoxTitle.Text = r.Title;
-                CheckBoxPublish.Checked = Convert.ToBoolean(r.Publish);
-                DropDownListAccessLevel.SelectedValue = r.AccessLevel;
-                CheckBoxShowTitle.Checked = Convert.ToBoolean(r.ShowTitle);
-                DropDownListPosition.SelectedValue = r.Position;
+                foreach (var r in GetContentById(_currentContentId))
+                {
+                    LabelIdResult.Text = r.ContentId.ToString();
+                    TextBoxTitle.Text = r.Title;
+                    CheckBoxPublish.Checked = Convert.ToBoolean(r.Publish);
+                    DropDownListAccessLevel.SelectedValue = r.AccessLevel;
+                    CheckBoxShowTitle.Checked = Convert.ToBoolean(r.ShowTitle);
+                    DropDownListPosition.SelectedValue = r.Position;
+                    TextBoxText.Text = r.Text;
+                }
             }
         }
 
-        
+        protected void ButtonSaveContent_Click(object sender, EventArgs e)
+        {
+            foreach (var r in GetContentById(_currentContentId))
+            {
+                r.Title = TextBoxTitle.Text;
+                r.Publish = CheckBoxPublish.Checked.ToString();
+                r.AccessLevel = DropDownListAccessLevel.SelectedValue;
+                r.ShowTitle = CheckBoxShowTitle.Checked.ToString();
+                r.Position = DropDownListPosition.SelectedValue;
+                r.Text = TextBoxText.Text;
+            }
+            _cmsEntity.SaveChanges();
+            Response.Redirect("~/Admin/Contents.aspx");
+        }
+
+        private IQueryable<CMS.Contents> GetContentById(int id)
+        {
+            var query = from content in _cmsEntity.Contents
+                        where content.ContentId == id
+                        select content;
+            return query;
+        }
     }
 }
