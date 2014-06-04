@@ -133,6 +133,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Admin\Contents.aspx" />
+    <Content Include="Admin\CreateContent.aspx" />
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\EditContent.aspx" />
     <Content Include="App_Themes\CMS\images\body-bg.gif" />
@@ -200,6 +201,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Admin\DataForDropDownList.xml" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -271,6 +273,13 @@
     </Compile>
     <Compile Include="Admin\Contents.aspx.designer.cs">
       <DependentUpon>Contents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateContent.aspx.cs">
+      <DependentUpon>CreateContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateContent.aspx.designer.cs">
+      <DependentUpon>CreateContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -12,6 +12,7 @@ namespace CMS.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             int state = (int)(Session["UpdateState"] ?? -1);
+
             if (state > 0)
             {
                 UpdateStateLabel.CssClass = "updateok";
@@ -25,6 +26,11 @@ namespace CMS.Admin
                 Session.Remove("UpdateState");
             }
             
+        }
+
+        protected void ButtonCreateContent_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

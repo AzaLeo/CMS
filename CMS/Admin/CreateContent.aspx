@@ -1,20 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditContent.aspx.cs" Inherits="CMS.Admin.EditContent" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateContent.aspx.cs" Inherits="CMS.Admin.CreateContent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-    Редактирование контента
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table class="CreateEditContent">    
-        <tr>
-            <td>
-                <asp:Label ID="LabelId" runat="server" Text="ID" />
-            </td>
-            <td>
-                <asp:Label runat="server" ID="LabelIdResult" />
-            </td>
-        </tr>
         <tr>
             <td>
                 <asp:Label ID="LabelTitle" runat="server" Text="Заголовок" />
@@ -67,7 +57,7 @@
         </tr>
         <tr>
             <td colspan="2" style="text-align: center;">
-                <asp:Button ID="ButtonSaveContent" runat="server" Text="Сохранить" OnClick="ButtonSaveContent_Click" />
+                <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" />
             </td>
         </tr>
     </table>

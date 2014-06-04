@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DropDown>
+  <Roles>
+    <Role>Admin</Role>
+    <Role>User</Role>
+    <Role>Guest</Role>
+  </Roles>
+  <Positions>
+    <Position>MainContent</Position>
+    <Position>SideBar</Position>
+  </Positions>
+</DropDown>

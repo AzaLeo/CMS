@@ -6,10 +6,9 @@
     Управление контентом
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" OnClick="ButtonCreateContent_Click" />
     <asp:Label ID="UpdateStateLabel" runat="server" />
-    <asp:Button ID="ButtonCreateContent" runat="server" Text="Сохранить" />
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="EntityDataSourceContents">
-
         <ItemTemplate>
             <table class="content">
                 <tr>

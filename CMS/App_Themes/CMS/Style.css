@@ -238,27 +238,27 @@ textarea {
             float: right;
         }
 
-table.content td, table.content th, table.editcontent td {
+table.content td, table.content th, table.CreateEditContent td {
     padding: 10px;
     background-color: #F7F7F7;
     border: solid 1px #EDEDED;
 }
 
-table.editcontent tr > td:first-child {
+table.CreateEditContent tr > td:first-child {
     padding: 10px;
     text-align: right;
     background-color: #F7F7F7;
     border: solid 1px #EDEDED;
 }
 
-table.editcontent tr td input[type=text] {
+table.CreateEditContent tr td input[type=text] {
     border: solid 1px #EDEDED;
     padding: 5px;
     width: 300px;
     background-color: #FFF9ED;
 }
 
-table.editcontent tr td textarea {
+table.CreateEditContent tr td textarea {
     border: solid 1px #EDEDED;
     padding: 5px;
     width: 300px;
@@ -266,17 +266,17 @@ table.editcontent tr td textarea {
     background-color: #FFF9ED;
 }
 
-table.editcontent tr td textarea:focus, table.editcontent tr td input[type=text]:focus {
+table.CreateEditContent tr td textarea:focus, table.CreateEditContent tr td input[type=text]:focus {
     border: solid 1px #8AA1FF;
 }
 
-table.editcontent tr td select {
+table.CreateEditContent tr td select {
     border: solid 1px #EDEDED;
     padding: 5px;
     background-color: #FFF9ED;
 }
 
-table.editcontent tr td input[type=submit] {
+input[type=submit] {
     border: solid 1px #EDEDED;
     padding: 5px;
     color: #fff;

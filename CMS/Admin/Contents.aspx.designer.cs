@@ -13,15 +13,6 @@ namespace CMS.Admin {
     public partial class Contents {
         
         /// <summary>
-        /// UpdateStateLabel элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UpdateStateLabel;
-        
-        /// <summary>
         /// ButtonCreateContent элемент управления.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace CMS.Admin {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonCreateContent;
+        
+        /// <summary>
+        /// UpdateStateLabel элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UpdateStateLabel;
         
         /// <summary>
         /// Repeater1 элемент управления.
