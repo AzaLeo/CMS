@@ -43,8 +43,13 @@ namespace CMS.Admin
                 r.Position = DropDownListPosition.SelectedValue;
                 r.Text = TextBoxText.Text;
             }
-            _cmsEntity.SaveChanges();
+            Session["UpdateState"] = _cmsEntity.SaveChanges();
             Response.Redirect("~/Admin/Contents.aspx");
+        }
+
+        void Contents_stateSave()
+        {
+            throw new NotImplementedException();
         }
 
         private IQueryable<CMS.Contents> GetContentById(int id)

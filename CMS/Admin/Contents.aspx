@@ -3,9 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+    Управление контентом
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Label ID="IsUpdateOk" runat="server"></asp:Label>
+    <asp:Label ID="UpdateStateLabel" runat="server" />
+    <asp:Button ID="ButtonCreateContent" runat="server" Text="Сохранить" />
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="EntityDataSourceContents">
 
         <ItemTemplate>
