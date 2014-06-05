@@ -45,7 +45,14 @@ namespace CMS.Admin
                 r.Position = DropDownListPosition.SelectedValue;
                 r.Text = TextBoxText.Text;
             }
-            Session["UpdateState"] = _cmsEntity.SaveChanges();
+
+            int change = _cmsEntity.SaveChanges();
+
+            if (change > 0)
+                Session["UpdateDbOk"] = "Данные успешно обновлены!";
+            else
+                Session["UpdateDbNotOk"] = "Данные не были обновлены!";
+
             Response.Redirect("~/Admin/Contents.aspx");
         }
 

@@ -6,10 +6,10 @@
     Управление контентом
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" OnClick="ButtonCreateContent_Click" />
+    <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" PostBackUrl="~/Admin/CreateContent.aspx" />
     <asp:Label ID="UpdateStateLabel" runat="server" />
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="EntityDataSourceContents">
-        <ItemTemplate>
+        <HeaderTemplate>
             <table class="content">
                 <tr>
                     <th>ID</th>
@@ -19,28 +19,32 @@
                     <th>Показать заголовок</th>
                     <th>Позиция</th>
                 </tr>
-                <tr>
-                    <td>
-                        <asp:Label runat="server" ID="Label1" Text='<%# Eval("ContentId")%>' />
-                    </td>
-                    <td>
-                        <asp:HyperLink runat="server" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>'><%# Eval("Title") %></asp:HyperLink>
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label3" Text='<%# Convert.ToBoolean(Eval("Publish")) ? "Да" : "Нет" %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label4" Text='<%# Eval("AccessLevel") %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label5" Text='<%# Convert.ToBoolean(Eval("ShowTitle")) ? "Да" : "Нет" %>' />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="Label6" Text='<%# Eval("Position") %>' />
-                    </td>
-                </tr>
-            </table>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <tr>
+                <td>
+                    <asp:Label runat="server" ID="Label1" Text='<%# Eval("ContentId")%>' />
+                </td>
+                <td>
+                    <asp:HyperLink runat="server" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>'><%# Eval("Title") %></asp:HyperLink>
+                </td>
+                <td>
+                    <asp:Label runat="server" ID="Label3" Text='<%# Convert.ToBoolean(Eval("Publish")) ? "Да" : "Нет" %>' />
+                </td>
+                <td>
+                    <asp:Label runat="server" ID="Label4" Text='<%# Eval("AccessLevel") %>' />
+                </td>
+                <td>
+                    <asp:Label runat="server" ID="Label5" Text='<%# Convert.ToBoolean(Eval("ShowTitle")) ? "Да" : "Нет" %>' />
+                </td>
+                <td>
+                    <asp:Label runat="server" ID="Label6" Text='<%# Eval("Position") %>' />
+                </td>
+            </tr>
         </ItemTemplate>
+        <FooterTemplate>
+            </table>
+        </FooterTemplate>
     </asp:Repeater>
     <asp:EntityDataSource ID="EntityDataSourceContents" runat="server" ConnectionString="name=CMSEntities" DefaultContainerName="CMSEntities" EnableFlattening="False" EntitySetName="Contents">
     </asp:EntityDataSource>

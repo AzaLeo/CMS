@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+    Добавление контента
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table class="CreateEditContent">    
@@ -57,7 +58,7 @@
         </tr>
         <tr>
             <td colspan="2" style="text-align: center;">
-                <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" />
+                <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" OnClick="ButtonCreateContent_Click" />
             </td>
         </tr>
     </table>

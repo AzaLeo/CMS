@@ -11,26 +11,18 @@ namespace CMS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int state = (int)(Session["UpdateState"] ?? -1);
-
-            if (state > 0)
+            if (Session["UpdateDbOk"] != null)
             {
                 UpdateStateLabel.CssClass = "updateok";
-                UpdateStateLabel.Text = "Данные успешно обновлены!";
-                Session.Remove("UpdateState");
+                UpdateStateLabel.Text = Session["UpdateDbOk"].ToString();
+                Session.Remove("UpdateDbOk");
             }
-            else if (state == 0)
+            else if (Session["UpdateDbNotOk"] != null)
             {
                 UpdateStateLabel.CssClass = "updatenotok";
-                UpdateStateLabel.Text = "При редактировании изменения не производились";
-                Session.Remove("UpdateState");
+                UpdateStateLabel.Text = Session["UpdateDbNotOk"].ToString();
+                Session.Remove("UpdateDbNotOk");
             }
-            
-        }
-
-        protected void ButtonCreateContent_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
