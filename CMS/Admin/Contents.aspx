@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contents.aspx.cs" Inherits="CMS.Admin.Contents" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #main-content {
+            width: auto;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     Управление контентом
@@ -25,7 +30,7 @@
                 <td>
                     <asp:Label runat="server" ID="Label1" Text='<%# Eval("ContentId")%>' />
                 </td>
-                <td>
+                <td style="text-align: left;">
                     <asp:HyperLink runat="server" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>'><%# Eval("Title") %></asp:HyperLink>
                 </td>
                 <td>
@@ -39,6 +44,10 @@
                 </td>
                 <td>
                     <asp:Label runat="server" ID="Label6" Text='<%# Eval("Position") %>' />
+                </td>
+                <td>прав
+                </td>
+                <td>прав
                 </td>
             </tr>
         </ItemTemplate>

@@ -242,6 +242,7 @@ table.content td, table.content th, table.CreateEditContent td {
     padding: 10px;
     background-color: #F7F7F7;
     border: solid 1px #EDEDED;
+    text-align: center;
 }
 
 table.CreateEditContent tr > td:first-child {

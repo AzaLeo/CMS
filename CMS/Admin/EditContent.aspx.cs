@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -46,7 +47,17 @@ namespace CMS.Admin
                 r.Text = TextBoxText.Text;
             }
 
-            int change = _cmsEntity.SaveChanges();
+            int change = 0;
+
+            try
+            {
+                change = _cmsEntity.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                Session["UpdateDbNotOk"] = ex.Message;
+                Response.Redirect("~/Admin/Contents.aspx");
+            }
 
             if (change > 0)
                 Session["UpdateDbOk"] = "Данные успешно обновлены!";
