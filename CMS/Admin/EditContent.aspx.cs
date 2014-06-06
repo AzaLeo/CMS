@@ -16,6 +16,7 @@ namespace CMS.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = CMS.Site.HeadTitle + " - Редактирование контента";
             LoadInDropDownListInXml();
             _cmsEntity = new CMSEntities();
             _currentContentId = Convert.ToInt32(Request.QueryString["id"]);

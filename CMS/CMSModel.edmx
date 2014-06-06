@@ -12,13 +12,13 @@
           <Key>
             <PropertyRef Name="ContentId" />
           </Key>
-          <Property Name="ContentId" Type="int" Nullable="false" />
+          <Property Name="ContentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Position" Type="nvarchar" Nullable="false" MaxLength="20" />
           <Property Name="Publish" Type="nvarchar" Nullable="false" MaxLength="10" />
           <Property Name="ShowTitle" Type="nvarchar" Nullable="false" MaxLength="10" />
           <Property Name="AccessLevel" Type="nvarchar" Nullable="false" MaxLength="10" />
           <Property Name="Text" Type="nvarchar(max)" />
-          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
       </Schema>
     </edmx:StorageModels>
@@ -32,13 +32,13 @@
           <Key>
             <PropertyRef Name="ContentId" />
           </Key>
-          <Property Name="ContentId" Type="Int32" Nullable="false" />
+          <Property Name="ContentId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Position" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <Property Name="Publish" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="ShowTitle" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="AccessLevel" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

@@ -33,6 +33,6 @@ D:\Работа\.NET\Проекты\CMS\CMS\bin\ru\System.Web.Optimization.resou
 D:\Работа\.NET\Проекты\CMS\CMS\bin\ru\System.Web.Providers.resources.dll
 D:\Работа\.NET\Проекты\CMS\CMS\bin\ru\Microsoft.AspNet.Membership.OpenAuth.resources.dll
 D:\Работа\.NET\Проекты\CMS\CMS\bin\ru\Microsoft.AspNet.FriendlyUrls.resources.dll
+D:\Работа\.NET\Проекты\CMS\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
 D:\Работа\.NET\Проекты\CMS\CMS\obj\Debug\CMS.dll
 D:\Работа\.NET\Проекты\CMS\CMS\obj\Debug\CMS.pdb
-D:\Работа\.NET\Проекты\CMS\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache

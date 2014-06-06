@@ -7,12 +7,12 @@
     <Key>
       <PropertyRef Name="ContentId" />
     </Key>
-    <Property Name="ContentId" Type="Int32" Nullable="false" />
+    <Property Name="ContentId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
     <Property Name="Position" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
     <Property Name="Publish" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
     <Property Name="ShowTitle" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
     <Property Name="AccessLevel" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
     <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
   </EntityType>
 </Schema>

@@ -11,7 +11,7 @@
     Управление контентом
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Button ID="ButtonCreateContent" runat="server" Text="Создать" PostBackUrl="~/Admin/CreateContent.aspx" />
+    <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/App_Themes/CMS/images/add.png" NavigateUrl="~/Admin/CreateContent.aspx" />
     <asp:Label ID="UpdateStateLabel" runat="server" />
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="EntityDataSourceContents">
         <HeaderTemplate>
@@ -31,7 +31,7 @@
                     <asp:Label runat="server" ID="Label1" Text='<%# Eval("ContentId")%>' />
                 </td>
                 <td style="text-align: left;">
-                    <asp:HyperLink runat="server" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>'><%# Eval("Title") %></asp:HyperLink>
+                    <asp:Label runat="server" ID="Label2" Text='<%# Eval("Title") %>' />
                 </td>
                 <td>
                     <asp:Label runat="server" ID="Label3" Text='<%# Convert.ToBoolean(Eval("Publish")) ? "Да" : "Нет" %>' />
@@ -45,9 +45,11 @@
                 <td>
                     <asp:Label runat="server" ID="Label6" Text='<%# Eval("Position") %>' />
                 </td>
-                <td>прав
+                <td class="EditDeletStyle">
+                    <asp:HyperLink ID="HyperLinkEdit" runat="server" ImageUrl="~/App_Themes/CMS/images/edit.png" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>' />
                 </td>
-                <td>прав
+                <td class="EditDeletStyle">
+                    <asp:HyperLink ID="HyperLinkDelete" runat="server" ImageUrl="~/App_Themes/CMS/images/delete.png" NavigateUrl='<%# Eval("ContentId", "~/Admin/DeleteContent.aspx?delete={0}")%>' />
                 </td>
             </tr>
         </ItemTemplate>

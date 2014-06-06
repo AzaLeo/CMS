@@ -11,7 +11,7 @@ namespace CMS.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Title = CMS.Site.HeadTitle + " - Панель администрирования";
         }
     }
 }

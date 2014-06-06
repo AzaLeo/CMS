@@ -135,9 +135,13 @@
     <Content Include="Admin\Contents.aspx" />
     <Content Include="Admin\CreateContent.aspx" />
     <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\DeleteContent.aspx" />
     <Content Include="Admin\EditContent.aspx" />
+    <Content Include="App_Themes\CMS\images\add.png" />
     <Content Include="App_Themes\CMS\images\body-bg.gif" />
     <Content Include="App_Themes\CMS\images\button-hover.gif" />
+    <Content Include="App_Themes\CMS\images\delete.png" />
+    <Content Include="App_Themes\CMS\images\edit.png" />
     <Content Include="App_Themes\CMS\images\favicon.ico" />
     <Content Include="App_Themes\CMS\images\footer.gif" />
     <Content Include="App_Themes\CMS\images\header.gif" />
@@ -287,6 +291,13 @@
     </Compile>
     <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DeleteContent.aspx.cs">
+      <DependentUpon>DeleteContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DeleteContent.aspx.designer.cs">
+      <DependentUpon>DeleteContent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EditContent.aspx.cs">
       <DependentUpon>EditContent.aspx</DependentUpon>

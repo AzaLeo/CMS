@@ -15,8 +15,8 @@ namespace CMS.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = CMS.Site.HeadTitle + " - Создание контента";
             _cmsEntity = new CMSEntities();
-            Page.Title = CMS.Site.HeadTitle + " - Создание нового контента";
             LoadInDropDownListInXml();
         }
 
