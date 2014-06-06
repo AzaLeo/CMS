@@ -11,6 +11,7 @@ namespace CMS.Admin
 {
     public partial class DeleteContent : System.Web.UI.Page
     {
+        
         private int _currentContentId;
         private CMSEntities _cmsEntity;
 

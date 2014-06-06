@@ -28,9 +28,11 @@ namespace CMS.Admin
                 UpdateStateLabel.Text = Session["UpdateDbNotOk"].ToString();
                 Session.Remove("UpdateDbNotOk");
             }
+        }
 
-            if (IsPostBack)
-                _currentContentId = 1;
+        protected void ImageButtonDelete_Command(object sender, CommandEventArgs e)
+        {
+            Response.Redirect("~/Admin/DeleteContent.aspx?delete=" + e.CommandName);
         }
     }
 }
