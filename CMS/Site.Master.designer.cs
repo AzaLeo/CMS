@@ -49,13 +49,13 @@ namespace CMS {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
         
         /// <summary>
-        /// Repeater1 элемент управления.
+        /// RepeaterMainContent элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterMainContent;
         
         /// <summary>
         /// SideBar элемент управления.
@@ -65,6 +65,15 @@ namespace CMS {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder SideBar;
+        
+        /// <summary>
+        /// RepeaterSideBar элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater RepeaterSideBar;
         
         /// <summary>
         /// FooterContent элемент управления.

@@ -20,8 +20,10 @@ namespace CMS
                                    where result.Publish == "true"
                                    select result;
 
-             Repeater1.DataSource = query.ToList();
-             Repeater1.DataBind();
+             RepeaterMainContent.DataSource = query.Where(r => r.Position == "MainContent").ToList();
+             RepeaterMainContent.DataBind();
+             RepeaterSideBar.DataSource = query.Where(r => r.Position == "SideBar").ToList();
+             RepeaterSideBar.DataBind();
         }
     }
 }
