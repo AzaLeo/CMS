@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditContent.aspx.cs" Inherits="CMS.Admin.EditContent" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EditContent.aspx.cs" Inherits="CMS.Admin.EditContent" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="AdminFeaturedContent" runat="server">
     Редактирование контента
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="AdminMainContent" runat="server">
     <table class="CreateEditContent">    
         <tr>
             <td>
@@ -72,7 +72,7 @@
         </tr>
     </table>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="AdminSideBar" runat="server">
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="FooterContent" runat="server">
 </asp:Content>

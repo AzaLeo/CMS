@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateContent.aspx.cs" Inherits="CMS.Admin.CreateContent" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateContent.aspx.cs" Inherits="CMS.Admin.CreateContent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="AdminFeaturedContent" runat="server">
     Добавление контента
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="AdminMainContent" runat="server">
     <table class="CreateEditContent">    
         <tr>
             <td>
@@ -63,7 +63,7 @@
         </tr>
     </table>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="AdminSideBar" runat="server">
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="FooterContent" runat="server">
 </asp:Content>
