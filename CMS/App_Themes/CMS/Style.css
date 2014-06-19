@@ -247,10 +247,10 @@ table.content td {
     text-align: center;
 }
 
-table.content td.EditDeletStyle {
-    background: #FAFAFA;
-    border: 0;
-}
+    table.content td.EditDeletStyle {
+        background: #FAFAFA;
+        border: 0;
+    }
 
 table.CreateEditContent tr > td:first-child {
     text-align: right;
@@ -271,9 +271,9 @@ table.CreateEditContent tr td textarea {
     background-color: #FFF9ED;
 }
 
-table.CreateEditContent tr td textarea:focus, table.CreateEditContent tr td input[type=text]:focus {
-    border: solid 1px #8AA1FF;
-}
+    table.CreateEditContent tr td textarea:focus, table.CreateEditContent tr td input[type=text]:focus {
+        border: solid 1px #8AA1FF;
+    }
 
 table.CreateEditContent tr td select {
     border: solid 1px #EDEDED;
@@ -289,11 +289,18 @@ input[type=submit] {
 }
 
 span.updateok {
-color: darkgreen;
-padding: 5px;
+    color: darkgreen;
+    padding: 5px;
 }
 
 span.updatenotok {
-color: darkred;
-padding: 5px;
+    color: darkred;
+    padding: 5px;
+}
+
+div.content-block {
+    border: solid 1px #EDEDED;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #F7F7F7;
 }

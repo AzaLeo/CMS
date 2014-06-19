@@ -46,7 +46,7 @@
                     <asp:Label runat="server" ID="Label6" Text='<%# Eval("Position") %>' />
                 </td>
                 <td class="EditDeletStyle">
-                    <asp:HyperLink ID="HyperLinkEdit" runat="server" ImageUrl="~/App_Themes/CMS/images/edit.png" NavigateUrl="~/Admin/EditContent.aspx?id={0}" />
+                    <asp:HyperLink ID="HyperLinkEdit" runat="server" ImageUrl="~/App_Themes/CMS/images/edit.png" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>' />
                 </td>
                 <td class="EditDeletStyle">
                     <asp:ImageButton ID="ImageButtonDelete" runat="server" ImageUrl="~/App_Themes/CMS/images/delete.png" OnCommand="ImageButtonDelete_Command" CommandName='<%# Eval("ContentId") %>' OnClientClick="return confirm('Вы точно хотите удалить этот контент-блок?');" />
