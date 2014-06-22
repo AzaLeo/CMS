@@ -1,18 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="CreateContent.aspx.cs" Inherits="CMS.Admin.CreateContent" ValidateRequest="false" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateContent.aspx.cs" Inherits="CMS.Admin.CreateContent" ValidateRequest="false" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="/packages/TinyMCE.4.1.0/content/scripts/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">
         tinyMCE.init({
-            language: 'ru',
+            language: "ru",
+            plugins: "link image media emoticons code",
+            toolbar: "bold italic underline link anchor image media code",
+            menu: " ",
             mode: "textareas"
         });
     </script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="AdminFeaturedContent" runat="server">
+
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     Добавление контента
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="AdminMainContent" runat="server">
-    <table class="CreateEditContent">    
+
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <table class="CreateEditContent">
         <tr>
             <td>
                 <asp:Label ID="LabelTitle" runat="server" Text="Заголовок" />
@@ -70,7 +76,7 @@
         </tr>
     </table>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="AdminSideBar" runat="server">
+<asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="FooterContent" runat="server">
 </asp:Content>

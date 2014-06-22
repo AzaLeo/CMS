@@ -13,6 +13,9 @@ namespace CMS.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataBase db = new DataBase();
+            RepeaterSideBar.DataSource = db.GetToSideBarContent();
+            RepeaterSideBar.DataBind();
             RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
         }
 

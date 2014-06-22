@@ -22,6 +22,10 @@ namespace CMS.Account
 
         protected void Page_Load()
         {
+            DataBase db = new DataBase();
+            RepeaterSideBar.DataSource = db.GetToSideBarContent();
+            RepeaterSideBar.DataBind();
+
             if (!IsPostBack)
             {
                 // Определите разделы для отображения

@@ -10,20 +10,10 @@ namespace CMS
     public partial class Site : System.Web.UI.MasterPage
     {
         public const string HeadTitle = "Тестовый сайт для SSA";
-        private CMSEntities _cmsEntity;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _cmsEntity = new CMSEntities();
 
-             var query = from result in _cmsEntity.Contents
-                                   where result.Publish == "true"
-                                   select result;
-
-             RepeaterMainContent.DataSource = query.Where(r => r.Position == "MainContent").ToList();
-             RepeaterMainContent.DataBind();
-             RepeaterSideBar.DataSource = query.Where(r => r.Position == "SideBar").ToList();
-             RepeaterSideBar.DataBind();
         }
     }
 }

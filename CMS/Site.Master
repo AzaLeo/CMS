@@ -16,21 +16,43 @@
         <div id="header">
             <div class="shell">
                 <div id="logo-holder">
-                    <h1 id="logo"><a href="#">WCSST 9</a></h1>
-                    <p id="quote">Free CSS Website Template</p>
+                    <h1 id="logo"><a href="/">CMS</a></h1>
+                    <p id="quote">Тестовое задание</p>
                 </div>
                 <div id="navigation">
                     <ul>
-                        <li><a href="#" class="active"><span>Home</span></a></li>
-                        <li><a href="#"><span>About Us</span></a></li>
-                        <li><a href="#"><span>Services</span></a></li>
-                        <li><a href="#"><span>Solutions</span></a></li>
-                        <li><a href="#"><span>Support</span></a></li>
-                        <li><a href="#"><span>Partners</span></a></li>
-                        <li><a href="#"><span>Contact</span></a></li>
+                        <li><a href="/">Главная</a></li>
+                        <li>
+                            <asp:LoginView ID="LoginView1" runat="server">
+                                <AnonymousTemplate>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Account/Register.aspx">Регистрация</asp:HyperLink></AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Account/Manage.aspx">Профиль</asp:HyperLink></LoggedInTemplate>
+                            </asp:LoginView>
+                        </li>
+                        <li>
+                            <asp:LoginView ID="LoginView2" runat="server">
+                                <RoleGroups>
+                                    <asp:RoleGroup Roles="admin">
+                                        <ContentTemplate>
+                                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/Default.aspx">Администраторский раздел</asp:HyperLink>
+                                        </ContentTemplate>
+                                    </asp:RoleGroup>
+                                </RoleGroups>
+                            </asp:LoginView>
+                        </li>
+                        <li>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                        </li>
                     </ul>
                 </div>
                 <div class="cl">&nbsp;</div>
+                <div style="text-align: right;">
+                    <asp:LoginView ID="LoginView3" runat="server">
+                        <AnonymousTemplate>Добро пожаловать, гость!</AnonymousTemplate>
+                        <LoggedInTemplate>С возвращением, <%= Page.User.Identity.Name  %> </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
             </div>
         </div>
 
@@ -50,28 +72,13 @@
                     <div class="post">
                         <asp:ContentPlaceHolder ID="MainContent" runat="server">
                         </asp:ContentPlaceHolder>
-                        <asp:Repeater ID="RepeaterMainContent" runat="server">
-                            <ItemTemplate>
-                                <div class="content-block">
-                                    <h2><%# Convert.ToBoolean(Eval("ShowTitle")) ? Eval("Title") : "" %></h2>
-                                    <p><%# Eval("Text") %></p>
-                                </div>
-                            </ItemTemplate>
-                        </asp:Repeater>
                     </div>
                 </div>
+
                 <div id="sidebar">
                     <div class="post">
                         <asp:ContentPlaceHolder ID="SideBar" runat="server">
                         </asp:ContentPlaceHolder>
-                        <asp:Repeater ID="RepeaterSideBar" runat="server">
-                            <ItemTemplate>
-                                <div class="content-block">
-                                    <h2><%# Convert.ToBoolean(Eval("ShowTitle")) ? Eval("Title") : "" %></h2>
-                                    <p><%# Eval("Text") %></p>
-                                </div>
-                            </ItemTemplate>
-                        </asp:Repeater>
                     </div>
                 </div>
                 <div class="cl">&nbsp;</div>

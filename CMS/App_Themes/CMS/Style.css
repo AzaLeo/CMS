@@ -26,12 +26,6 @@ a {
         border: 0;
     }
 
-input, textarea, select {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    border: 0;
-}
-
 textarea {
     overflow: hidden;
 }
@@ -81,11 +75,10 @@ textarea {
     }
 
         #logo-holder h1#logo a {
-            font-size: 22px;
+            font-size: 25px;
             font-weight: normal;
             color: #000;
             line-height: 21px;
-            font-style: italic;
         }
 
     #logo-holder p#quote {
@@ -127,8 +120,7 @@ textarea {
                 }
 
                 #navigation ul li a:hover, #navigation ul li a.active, #navigation ul li a:hover span, #navigation ul li a.active span {
-                    background: url(images/nav-hover.gif) no-repeat 0 0;
-                    color: #a6a6a6;
+                    color: #8AA1FF;
                 }
 
                     #navigation ul li a:hover span, #navigation ul li a.active span {
@@ -191,25 +183,20 @@ textarea {
 }
 
     .post h3 {
-        color: #000;
-        font-size: 22px;
-        font-style: italic;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #444;
     }
 
-    .post p {
-        padding-top: 10px;
+    .post p a {
+        color: #0252aa;
+        text-decoration: underline;
     }
 
-        .post p a {
-            color: #4c4c4c;
-            text-decoration: underline;
+        .post p a:hover {
+            color: #ff0000;
+            text-decoration: none;
         }
-
-            .post p a:hover {
-                color: #ff0000;
-                text-decoration: none;
-            }
 
 .footer {
     font-family: Verdana, sans-serif;
@@ -259,7 +246,7 @@ table.CreateEditContent tr > td:first-child {
 table.CreateEditContent tr td input[type=text] {
     border: solid 1px #EDEDED;
     padding: 5px;
-    width: 300px;
+    width: 460px;
     background-color: #FFF9ED;
 }
 
@@ -284,6 +271,7 @@ table.CreateEditContent tr td select {
 input[type=submit] {
     border: solid 1px #EDEDED;
     padding: 5px;
+    margin: 5px;
     color: #fff;
     background-color: #9E9E9E;
 }
@@ -298,10 +286,27 @@ span.updatenotok {
     padding: 5px;
 }
 
-div.content-block {
+div.content-block, .post fieldset {
     border: solid 1px #EDEDED;
     padding: 5px;
     border-radius: 5px;
     background-color: #F7F7F7;
     margin-bottom: 10px;
+}
+
+.content-block ul {
+    padding-left: 20px;
+}
+
+.content-block h2 {
+    padding-bottom: 10px;
+}
+
+.content-block p {
+    padding-bottom: 5px;
+}
+
+#loginForm ul li, .post fieldset ul li {
+    list-style-type: none;
+    padding: 5px;
 }

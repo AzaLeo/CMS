@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Contents.aspx.cs" Inherits="CMS.Admin.Contents" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contents.aspx.cs" Inherits="CMS.Admin.Contents" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -7,11 +7,11 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="AdminFeaturedContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     Управление контентом
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="AdminMainContent" runat="server">
-    <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/App_Themes/CMS/images/add.png" NavigateUrl="~/Admin/CreateContent.aspx" />
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:HyperLink ID="HyperLink1" runat="server" ToolTip="Создать новый контент-блок" ImageUrl="~/App_Themes/CMS/images/add.png" NavigateUrl="~/Admin/CreateContent.aspx" />
     <asp:Label ID="UpdateStateLabel" runat="server" />
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="EntityDataSourceContents">
         <HeaderTemplate>
@@ -46,10 +46,10 @@
                     <asp:Label runat="server" ID="Label6" Text='<%# Eval("Position") %>' />
                 </td>
                 <td class="EditDeletStyle">
-                    <asp:HyperLink ID="HyperLinkEdit" runat="server" ImageUrl="~/App_Themes/CMS/images/edit.png" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>' />
+                    <asp:HyperLink ID="HyperLinkEdit" runat="server" ToolTip="Редактировать" ImageUrl="~/App_Themes/CMS/images/edit.png" NavigateUrl='<%# Eval("ContentId", "~/Admin/EditContent.aspx?id={0}")%>' />
                 </td>
                 <td class="EditDeletStyle">
-                    <asp:ImageButton ID="ImageButtonDelete" runat="server" ImageUrl="~/App_Themes/CMS/images/delete.png" OnCommand="ImageButtonDelete_Command" CommandName='<%# Eval("ContentId") %>' OnClientClick="return confirm('Вы точно хотите удалить этот контент-блок?');" />
+                    <asp:ImageButton ID="ImageButtonDelete" runat="server" ToolTip="Удалить" ImageUrl="~/App_Themes/CMS/images/delete.png" OnCommand="ImageButtonDelete_Command" CommandName='<%# Eval("ContentId") %>' OnClientClick="return confirm('Вы точно хотите удалить этот контент-блок?');" />
                 </td>
             </tr>
         </ItemTemplate>
@@ -59,8 +59,4 @@
     </asp:Repeater>
     <asp:EntityDataSource ID="EntityDataSourceContents" runat="server" ConnectionString="name=CMSEntities" DefaultContainerName="CMSEntities" EnableFlattening="False" EntitySetName="Contents">
     </asp:EntityDataSource>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="AdminSideBar" runat="server">
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="FooterContent" runat="server">
 </asp:Content>

@@ -11,7 +11,11 @@ namespace CMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataBase db = new DataBase();
+            RepeaterMainContent.DataSource = db.GetToMainContent();
+            RepeaterMainContent.DataBind();
+            RepeaterSideBar.DataSource = db.GetToSideBarContent();
+            RepeaterSideBar.DataBind();
         }
     }
 }
