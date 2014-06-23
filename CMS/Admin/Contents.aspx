@@ -7,9 +7,11 @@
         }
     </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     Управление контентом
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <asp:HyperLink ID="HyperLink1" runat="server" ToolTip="Создать новый контент-блок" ImageUrl="~/App_Themes/CMS/images/add.png" NavigateUrl="~/Admin/CreateContent.aspx" />
     <asp:Label ID="UpdateStateLabel" runat="server" />

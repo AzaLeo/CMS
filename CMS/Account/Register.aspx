@@ -60,6 +60,7 @@
         </WizardSteps>
     </asp:CreateUserWizard>
 </asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
     <asp:Repeater ID="RepeaterSideBar" runat="server">
         <ItemTemplate>

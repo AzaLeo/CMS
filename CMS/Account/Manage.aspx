@@ -6,7 +6,6 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="MainContent" runat="server">
-
     <section id="passwordForm">
         <asp:PlaceHolder runat="server" ID="successMessage" Visible="false" ViewStateMode="Disabled">
             <p class="message-success"><%: SuccessMessage %></p>
@@ -123,6 +122,7 @@
         <uc:OpenAuthProviders runat="server" ReturnUrl="~/Account/Manage" />--%>
     </section>
 </asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
     <asp:Repeater ID="RepeaterSideBar" runat="server">
         <ItemTemplate>

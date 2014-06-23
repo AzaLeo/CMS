@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" type="image/x-icon" href="/App_Themes/CMS/images/favicon.ico" />
@@ -11,8 +12,10 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
     <form id="form1" runat="server">
+
         <div id="header">
             <div class="shell">
                 <div id="logo-holder">
@@ -49,8 +52,8 @@
                 <div class="cl">&nbsp;</div>
                 <div style="text-align: right;">
                     <asp:LoginView ID="LoginView3" runat="server">
-                        <AnonymousTemplate>Добро пожаловать, гость!</AnonymousTemplate>
-                        <LoggedInTemplate>С возвращением, <%= Page.User.Identity.Name  %> </LoggedInTemplate>
+                        <AnonymousTemplate><span class="loggedin">Добро пожаловать, гость!</span></AnonymousTemplate>
+                        <LoggedInTemplate><span class="loggedout">С возвращением, <b><%= Page.User.Identity.Name  %></b></span></LoggedInTemplate>
                     </asp:LoginView>
                 </div>
             </div>

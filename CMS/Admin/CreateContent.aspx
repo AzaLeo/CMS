@@ -76,7 +76,3 @@
         </tr>
     </table>
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
-</asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="FooterContent" runat="server">
-</asp:Content>

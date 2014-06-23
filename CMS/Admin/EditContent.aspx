@@ -15,6 +15,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     Редактирование контента
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <table class="CreateEditContent">
         <tr>
@@ -81,6 +82,4 @@
             </td>
         </tr>
     </table>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="SideBar" runat="server">
 </asp:Content>

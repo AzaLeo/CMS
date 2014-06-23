@@ -310,3 +310,11 @@ div.content-block, .post fieldset {
     list-style-type: none;
     padding: 5px;
 }
+
+.loggedin {
+    color: darkred;
+}
+
+.loggedout {
+    color: darkgreen;
+}

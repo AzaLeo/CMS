@@ -28,5 +28,4 @@ namespace CMS
             return _result.Where(r => r.Position == "SideBar").ToList();
         }
     }
-
 }
