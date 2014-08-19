@@ -7,3 +7,4 @@ D:\Проекты\CMS\CMS\bin\CMS.dll
 D:\Проекты\CMS\CMS\bin\CMS.pdb
 D:\Проекты\CMS\CMS\obj\Debug\CMS.dll
 D:\Проекты\CMS\CMS\obj\Debug\CMS.pdb
+d:\Проекты\CMS\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache

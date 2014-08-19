@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" type="image/x-icon" href="/App_Themes/CMS/images/favicon.ico" />
     <link href="/App_Themes/CMS/Style.css" type="text/css" rel="stylesheet" />
-    <title>Тестовый сайт для SSA</title>
+    <title>Тестовый сайт</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
